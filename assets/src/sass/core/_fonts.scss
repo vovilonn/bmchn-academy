@@ -1,0 +1,10 @@
+// New fonts
+$font-primary:              'Roboto', Helvetica, Arial, sans-serif;
+
+$main-font-path:            '../../src/fonts';
+
+@include font-face('Roboto', '#{$main-font-path}/Roboto/Roboto-Regular', normal, normal, woff);
+@include font-face('Roboto', '#{$main-font-path}/Roboto/Roboto-Light', 300, normal, woff);
+@include font-face('Roboto', '#{$main-font-path}/Roboto/Roboto-Medium', 500, normal, woff);
+@include font-face('Roboto', '#{$main-font-path}/Roboto/Roboto-Bold', 700, normal, woff);
+@include font-face('Roboto', '#{$main-font-path}/Roboto/Roboto-Heavy', 800, normal, woff);

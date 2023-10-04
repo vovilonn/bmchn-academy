@@ -1,0 +1,31 @@
+html,
+body {
+    min-width: 320px;
+    background: #fff;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 3.3vh;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+        background: #99999D;
+    }
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 2560px;
+    overflow-x: hidden;
+}

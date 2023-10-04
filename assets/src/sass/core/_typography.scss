@@ -1,0 +1,18 @@
+html,
+body {
+  font-family: $font-primary;
+  color: $c-text-primary;
+  background: $c-bg-primary;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+
+  &::selection {
+    color: #fff!important;
+    background: rgba(0,0,0, .2);
+  }
+
+}

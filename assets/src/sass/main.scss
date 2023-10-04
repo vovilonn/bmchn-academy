@@ -1,0 +1,24 @@
+@import "vendor/include-media";
+@import "vendor/reset";
+@import "vendor/swiper-bundle.min";
+
+@import "core/mixins";
+@import "core/variables";
+@import "core/fonts";
+@import "core/general";
+@import "core/typography";
+
+
+@import "layout/header";
+@import "layout/footer";
+
+@import "components/links";
+@import "components/button";
+@import "components/nav";
+@import "components/page-nav-popup";
+
+@import "blocks/main-slider";
+
+@import "pages/biomachine";
+@import "pages/vacancies";
+@import "pages/academy";

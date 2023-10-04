@@ -1,0 +1,60 @@
+@mixin anim($param: all, $dur: $animation-speed, $type: ease-in-out, $delay: 0s) {
+    transition: $param $dur $type $delay;
+}
+
+@mixin hover{
+    @include media('>=desktop'){
+        &:hover{
+            @content;
+        }
+    }
+}
+
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
+
+@mixin adaptive-font($mobSize, $pcSize: $mobSize, $minScr: $screen-min, $maxScr: $screen-xl) {
+    $addSize: $pcSize - $mobSize;
+    $max-width: $maxScr - $minScr;
+    font-size: calc(#{$mobSize / 16 + rem} + #{$addSize} * ((100vw - #{$minScr}) / #{strip-unit($max-width)}));
+
+    @include media('>=#{$maxScr}') {
+        font-size: #{$pcSize / 16 + rem};
+    }
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+    $src: null;
+
+    $extmods: (
+            eot: "?",
+            svg: "#" + str-replace($name, " ", "_")
+    );
+
+    $formats: (
+            otf: "opentype",
+            ttf: "truetype"
+    );
+
+    @each $ext in $exts {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}

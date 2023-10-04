@@ -1,0 +1,113 @@
+.page-nav-popup {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+  background: rgba(4,4,4, .7);
+  transition: .3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+
+  &.--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__inner {
+    max-width: 546px;
+    width: 100%;
+    padding: 82px 0 16px;
+    border-radius: 6px;
+    background: #F1F1F1;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &[data-page-nav-index="1"] {
+
+    }
+
+    &[data-page-nav-index="2"] {
+      background: linear-gradient(180deg, #101010 0%, #020202 100%);
+
+      h3, .js-close-hard {
+        color: #F1F1F1;
+      }
+
+      .js-close {
+        background: url('../../img/page-nav-popup-close-white.svg') no-repeat center;
+        background-size: contain;
+      }
+    }
+
+    &[data-page-nav-index="3"] {
+      background: linear-gradient(180deg, #040F1C 0%, #020202 100%);
+
+      h3, .js-close-hard {
+        color: #F1F1F1;
+      }
+
+      .js-close {
+        background: url('../../img/page-nav-popup-close-white.svg') no-repeat center;
+        background-size: contain;
+      }
+    }
+
+    &.--active {
+      display: flex;
+    }
+
+    h3 {
+      color: var(--dark-text, #1D1D1F);
+      text-align: center;
+      @include adaptive-font(32);
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.64px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      max-width: 309px;
+    }
+
+    p {
+      color: #99999D;
+      text-align: center;
+      @include adaptive-font(16);
+      font-weight: 500;
+      line-height: 1.36;
+      letter-spacing: -0.16px;
+      margin-bottom: 32px;
+      max-width: 309px;
+    }
+
+    .btn {
+      margin-bottom: 48px;
+    }
+
+    .js-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: url('../../img/page-nav-popup-close.svg') no-repeat center;
+      background-size: contain;
+      width: 24px;
+      height: 24px;
+    }
+
+    > button {
+      color: #1D1D1F;
+      text-align: center;
+      @include adaptive-font(16);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+  }
+}

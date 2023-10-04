@@ -1,0 +1,163 @@
+.biomachine-page {
+  padding-bottom: 100vh;
+
+  > section {
+    z-index: 2;
+    background-color: $c-bg-primary;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    &.--visible {
+      z-index: 11;
+    }
+  }
+}
+
+.footer {
+  min-height: 100vh;
+  padding: 100px 32px 52px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+
+  @include media('<tablet') {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &__text {
+    max-width: 630px;
+    text-align: center;
+    @include adaptive-font(48,88);
+    font-weight: 700;
+    letter-spacing: -1.76px;
+    text-transform: uppercase;
+
+    @include media('<tablet') {
+      letter-spacing: -0.96px;
+      line-height: .96;
+    }
+
+    span {
+      line-height: .96;
+      display: block;
+      @include media('>=tablet') {
+        padding-bottom: 32px;
+      }
+    }
+  }
+
+  &__dsc {
+    @include media('>=tablet') {
+      position: absolute;
+      bottom: 68px;
+    }
+
+    @include media('<tablet') {
+      padding: 16px 0 32px;
+    }
+
+    p {
+      color: $c-text-secondary;
+      text-align: center;
+      @include adaptive-font(14, 16);
+      font-weight: 500;
+      line-height: 1.36;
+      letter-spacing: -0.16px;
+
+      @include media('<tablet') {
+        letter-spacing: -0.14px;
+        max-width: 253px;
+      }
+    }
+  }
+
+  &__bottom {
+    max-width: calc(100% - 64px);
+    position: absolute;
+    bottom: 0;
+    padding: 16px 0;
+    display: flex;
+    width: 100%;
+    border-top: 1px solid rgba(241, 241, 241, .2);
+
+    @include media('>=desktop') {
+      justify-content: center;
+    }
+
+    @include media('<desktop') {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    > span {
+      color: #99999D;
+      @include adaptive-font(14, 16);
+      font-weight: 700;
+      line-height: 1.2;
+
+      @include media('>=desktop') {
+        position: absolute;
+        left: 0;
+      }
+
+      @include media('<tablet') {
+        order: 3;
+        margin-top: 10px;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+
+      @include media('<desktop') {
+        margin-bottom: 16px;
+        order: 1;
+      }
+
+      li {
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
+
+        a {
+          color: #F1F1F1;
+          @include adaptive-font(14, 16);
+          font-weight: 700;
+          line-height: 1.2;
+        }
+      }
+    }
+
+    > a {
+      color: #99999D;
+      @include adaptive-font(16);
+      font-weight: 700;
+      line-height: 1.2;
+      transition: .3s ease-in-out;
+
+      @include media('>=desktop') {
+        position: absolute;
+        right: 0;
+      }
+
+      @include media('<desktop') {
+        order: 2;
+      }
+
+      @include hover() {
+        color: $c-text-primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.footer .page-nav {
+  position: absolute;
+  top: 40px;
+
+  @include media('<tablet') {
+    position: relative;
+    top: unset;
+    padding-bottom: 0;
+    order: 3;
+    z-index: 10;
+  }
+}
+
+.vacancies-page .page-nav {
+  mix-blend-mode: difference;
+  background-color: transparent;
+  top: 41px;
+  bottom: unset;
+}
+
+.page-nav {
+  position: fixed;
+  padding: 0 0 20px;
+  width: 100%;
+  bottom: 0;
+  z-index: 3;
+  transition: .3s ease-in-out;
+  opacity: 1;
+  visibility: visible;
+
+  &.js-page-nav {
+    mix-blend-mode: difference;
+    background-color: transparent;
+  }
+
+  &.--hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      display: flex;
+
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+
+      &.active {
+        a {
+          color: $c-text-primary;
+        }
+      }
+
+      a {
+        color: #99999D;
+        text-align: center;
+        @include adaptive-font(16);
+        font-weight: 700;
+        line-height: 1.38;
+        letter-spacing: -0.32px;
+        transition: .3s ease-in-out;
+
+        @include hover() {
+          color: $c-text-primary;
+        }
+      }
+
+    }
+  }
+}
