@@ -88,9 +88,10 @@
 <section class="academy-circle">
     <div class="academy-circle__head">
         <span class="academy-circle__subtitle">наш подход</span>
-        <div class="academy-circle__line">Для нас здоровье –</div>
-        <div class="academy-circle__line">это баланс между интеллектуальным,</div>
-        <div class="academy-circle__line">физическим и духовным развитием</div>
+        <div class="academy-circle__line">Для нас здоровье -</div>
+        <div class="academy-circle__line">это баланс между интеллектуальным,
+            физическим и духовным развитием
+        </div>
     </div>
     <div class="academy-circle__inner">
         <img src="assets/img/academy-circle-image.png" alt="Academy Circle Image">
@@ -120,28 +121,34 @@
         <div class="academy-principles__item">
             <span>Принцип №1</span>
             <h3>Системно и без «воды»</h3>
+            <button class="js-principles-popup-opener" data-index="1">Подробнее</button>
         </div>
         <div class="academy-principles__item">
             <span>Принцип №2</span>
             <h3>Минимум действий, максимум результата</h3>
+            <button class="js-principles-popup-opener" data-index="2">Подробнее</button>
         </div>
         <div class="academy-principles__item">
             <span>Принцип №3</span>
             <h3>Опора на реальную науку</h3>
+            <button class="js-principles-popup-opener" data-index="3">Подробнее</button>
         </div>
     </div>
     <div class="academy-principles__row">
         <div class="academy-principles__item">
             <span>Принцип №4</span>
             <h3>Комплексный подход и баланс</h3>
+            <button class="js-principles-popup-opener" data-index="4">Подробнее</button>
         </div>
         <div class="academy-principles__item">
             <span>Принцип №5</span>
             <h3>Делаем для людей</h3>
+            <button class="js-principles-popup-opener" data-index="5">Подробнее</button>
         </div>
         <div class="academy-principles__item">
             <span>Принцип №6</span>
             <h3>Сила привычки плавит титан</h3>
+            <button class="js-principles-popup-opener" data-index="6">Подробнее</button>
         </div>
     </div>
 </section>
@@ -182,7 +189,9 @@
         <img src="assets/img/academy-footer-bg.png" alt="Academy Footer Background">
     </div>
     <div class="academy-footer__text">
-        <div>Ни один человек не имеет права быть любителем в вопросах физического воспитания. Стыдно человеку состариться, не видя красоты и силы, на которые способно его тело</div>
+        <div>Ни один человек не имеет права быть любителем в вопросах физического воспитания. Стыдно человеку
+            состариться, не видя красоты и силы, на которые способно его тело
+        </div>
         <span>© Сократ</span>
     </div>
 </section>
@@ -198,6 +207,90 @@
     </ul>
 
     <a href="#">Политика конфиденциальности</a>
+</div>
+
+<nav class="page-nav js-page-nav">
+    <ul>
+        <li><a data-page-nav-index="1" href="https://academy.bmchn.com">ACADEMY</a></li>
+        <li><a data-page-nav-index="2" href="https://store.bmchn.com">STORE</a></li>
+        <li class="active"><a data-page-nav-index="3" href="#">BIOMACHINE</a></li>
+    </ul>
+</nav>
+
+<div class="principles-popup js-principles-popup">
+    <div class="principles-popup__inner">
+        <button class="principles-popup__close js-principles-popup-close">
+            <img src="assets/img/close-ico.svg" alt="Services Close Ico">
+        </button>
+        <div class="principles-popup__nav js-principles-popup-nav">
+            <ul>
+                <li>
+                    <button data-index="1" class="--active">Принцип №1</button>
+                </li>
+                <li>
+                    <button data-index="2">Принцип №2</button>
+                </li>
+                <li>
+                    <button data-index="3">Принцип №3</button>
+                </li>
+                <li>
+                    <button data-index="4">Принцип №4</button>
+                </li>
+                <li>
+                    <button data-index="5">Принцип №5</button>
+                </li>
+                <li>
+                    <button data-index="6">Принцип №6</button>
+                </li>
+            </ul>
+        </div>
+        <div class="principles-popup__container js-principles-popup-container --active" data-index="1">
+            <h3>Системно и без «воды»</h3>
+            <p>Наша главная сила – фильтровать и систематизировать.</p>
+            <p>Приходя к нам, вы можете быть уверены, что мы изучили всё, что существует в открытом доступе по этой теме
+                и выработали лучшие решения.</p>
+            <p>Именно поэтому наши бесплатные видео набирают миллионы просмотров, а обучающие материалы так эффективны
+                на практике.</p>
+        </div>
+        <div class="principles-popup__container js-principles-popup-container" data-index="2">
+            <h3>Минимум действий,<br>максимум результата </h3>
+            <p>Мы придерживаемся убеждения, что качество и эффективность не обязательно требуют множества шагов и
+                длительных процессов.</p>
+            <p>Экономим своё и ваше время, выбирая самые рабочие инструменты и методы.</p>
+            <p>Минимум действий, максимум результата.</p>
+        </div>
+        <div class="principles-popup__container js-principles-popup-container" data-index="3">
+            <h3>Опора на реальную науку </h3>
+            <p>Всё, что мы создаём, делается с опорой на научные данные.</p>
+            <p>Мы тщательно фильтруем информацию, отсеивая некачественные исследования. Например: финансируемые
+                очевидными бенефициарами, проводимые на малых выборках или в недостаточно репрезентативные сроки.</p>
+            <p>Мы стремимся предоставить вам качественный конечный продукт без неясностей.</p>
+        </div>
+        <div class="principles-popup__container js-principles-popup-container" data-index="4">
+            <h3>Комплексный подход и баланс</h3>
+            <p>Все манипуляции со здоровьем и образом жизни воздействуют на нас комплексно.</p>
+            <p>Питание, дыхание, сон, физическая активность, психология — вмешательство в любой из элементов влечёт за собой каскадные изменения во всех остальных.
+            </p>
+            <p>Мы учитываем эту связь при создании продуктов, делая их многофункциональными.</p>
+        </div>
+        <div class="principles-popup__container js-principles-popup-container" data-index="5">
+            <h3>Делаем для людей</h3>
+            <p>Мы понимаем, как трудно развиваться в потоке хаоса современных реалий.
+            </p>
+            <p>Мы знаем, с какими сложностями сталкивается каждый из вас на пути саморазвития.
+            </p>
+            <p>Потому что сами идём по этому пути.</p>
+            <p>Все, что мы создаём, мы делаем в том числе для себя и своих близких.  </p>
+            <p>Поэтому во главе угла стоит эффективность, практичность и простота решений.</p>
+        </div>
+        <div class="principles-popup__container js-principles-popup-container" data-index="6">
+            <h3>Сила привычки плавит титан</h3>
+            <p>Мы — то, что мы делаем ежедневно.</p>
+            <p>Чтобы сохранять высокую продуктивность и быть здоровым, мы внедряем нужные привычки осознанно.
+            </p>
+            <p>Только те, у кого работа над собой и своим здоровьем вошла в привычку — достигают долгосрочных и стабильных результатов.</p>
+        </div>
+    </div>
 </div>
 
 <script src="assets/src/js/vendor/jquery.min.js"></script>
