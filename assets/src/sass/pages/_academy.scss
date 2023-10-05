@@ -2,8 +2,44 @@
   position: relative;
   padding-bottom: 60px;
 
+  .btn {
+    background: #00529E;
+  }
+
   .footer__bottom {
     left: 32px;
+  }
+}
+
+.academy-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 43px 0;
+  mix-blend-mode: difference;
+  background-color: transparent;
+  z-index: 3;
+
+  ul {
+    display: flex;
+    align-items: center;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+
+      a {
+        color: #F1F1F1;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+    }
   }
 }
 
@@ -121,8 +157,31 @@
   }
 
   &__inner {
-    img {
+    max-width: 1376px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
       width: 100%;
+
+      &:nth-child(1) {
+        width: 455px;
+        height: 456px;
+        position: absolute;
+        transform: translateY(6px);
+        animation: 20s linear rotate infinite;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
     }
   }
 
