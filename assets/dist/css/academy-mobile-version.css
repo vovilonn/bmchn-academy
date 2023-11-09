@@ -1,0 +1,120 @@
+@media (max-width: 570px) {
+.academy-hero__bg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: calc(100% + 45px);
+    height: 25%;
+}
+
+.academy-hero__bg img {
+    width: 100%;
+    height: 100vh;
+    object-position: center;
+    object-fit: cover;
+}
+
+.academy-hero__text h1 {
+    font-size: calc(2.5rem + 0*(100vw - 360px)/1240);
+}
+
+.academy-hero__text {
+    /* max-width: 620px; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    width: 100%;
+}
+
+.academy-hero__text p {
+    color: #f1f1f1;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    max-width: none;
+}
+
+.academy-circle__line:nth-child(2) {
+    padding-left: 0;
+}
+
+.academy-circle {
+    padding: 50px 16px 0;
+}
+
+.academy-circle__line {
+    font-size: calc(1.7rem + 0*(100vw - 360px)/1240);
+}
+
+.academy-circle__inner img {
+    width: 100%;
+    margin-bottom: 150px;
+}
+
+.academy-circle__text {
+    width: auto;
+}
+
+.academy-audio__bg {
+    width: 320px;
+}
+
+.academy-audio__player button {
+    margin-top: 40px;
+}
+
+.academy-audio__text {
+    padding: 0 16px;
+}
+
+.academy-principles h2 {
+    font-size: calc(2.5rem + 0*(100vw - 360px)/1240);
+}
+
+.academy-principles__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.academy-principles__row:nth-child(2) .academy-principles__item:nth-child(1) {
+    width: 100%;
+}
+
+.academy-principles__row:nth-child(2) .academy-principles__item:nth-child(2) {
+    width: 100%;
+}
+
+.academy-principles__row:nth-child(2) .academy-principles__item:nth-child(3) {
+    width: 100%;
+}
+
+.academy-principles__row:nth-child(3) .academy-principles__item:nth-child(1) {
+    width: 100%;
+}
+
+.academy-principles__row:nth-child(3) .academy-principles__item:nth-child(2) {
+    width: 100%;
+}
+
+.academy-principles__row:nth-child(3) .academy-principles__item:nth-child(3) {
+    width: 100%;
+}
+
+.academy-principles__item:not(:last-child) {
+    margin-right: 0;
+}
+
+.academy-principles__item h3 {
+    font-size: 28px;
+}
+
+.academy-quote__text {
+    padding: 0 16px;
+}
+
+.academy-join-title h2 {
+    font-size: calc(1.7rem + 0*(100vw - 360px)/1240);
+}
+}
