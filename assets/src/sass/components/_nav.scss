@@ -1,7 +1,9 @@
 .footer .page-nav {
   position: absolute;
   top: 40px;
-
+  height: 60px;
+  width: auto;
+  
   @include media('<tablet') {
     position: relative;
     top: unset;

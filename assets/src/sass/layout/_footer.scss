@@ -101,6 +101,11 @@
 
     > span {
       color: #99999D;
+
+      @media (max-width: 720px) {
+        display: none;
+      }
+
       @include adaptive-font(14, 16);
       font-weight: 700;
       line-height: 1.2;
@@ -119,22 +124,20 @@
     ul {
       display: flex;
       align-items: center;
-
+      margin: auto;
       @include media('<desktop') {
         margin-bottom: 16px;
         order: 1;
       }
 
       li {
-        &:not(:last-child) {
-          margin-right: 40px;
-        }
 
         a {
           color: #F1F1F1;
           @include adaptive-font(14, 16);
           font-weight: 700;
           line-height: 1.2;
+
         }
       }
     }
@@ -153,6 +156,9 @@
 
       @include media('<desktop') {
         order: 2;
+
+        margin-left: auto;
+        margin-right: auto;
       }
 
       @include hover() {

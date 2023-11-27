@@ -28,7 +28,10 @@
 
   &__nav {
     margin-bottom: 38px;
-
+    
+    @media (max-width: 570px) {
+      overflow: scroll;
+    }
     ul {
       display: flex;
       align-items: center;
