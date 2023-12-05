@@ -172,18 +172,62 @@
     line-height: 1.2;
     text-transform: uppercase;
     margin-bottom: 8px;
-    text-indent: 702px;
+    // text-indent: 32vh;
+    // text-align: center;
+    width: fit-content;
   }
 
   &__line {
-    font-size: 56px;
+    font-size: 3vw;
     font-weight: 600;
     line-height: 1;
     letter-spacing: -1.12px;
     text-transform: uppercase;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    &:nth-child(4) {
+      text-align: left;
+    }
+
+    &:nth-child(3) {
+      text-align: left;
+    }
 
     &:nth-child(2) {
-      text-indent: 702px;
+      text-indent: 72px;
+    }
+
+    &:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      margin-right: 0;
+      margin-left: auto;
+    }
+
+    @media (max-width: 920px) {
+      text-align: center;
+      font-size: 22px;
+      width: 380px;
+      &:nth-child(4) {
+        text-align: center;
+      }
+  
+      &:nth-child(3) {
+        text-align: center;
+      }
+  
+      &:nth-child(2) {
+        text-indent: 0;
+      }
+  
+      &:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        margin: 0 auto;
+      }
     }
   }
 
@@ -194,12 +238,20 @@
     align-items: center;
     justify-content: center;
 
+   .academy-circle-desktop{
+      svg {
+        width: 95vw;
+        height: 40vw;
+      }
+   }
     svg {
       width: 100%;
 
       &:nth-child(1) {
-        width: 455px;
-        height: 456px;
+        // width: 455px;
+        // height: 456px;
+        width: 30vw;
+        height: 31vw;
         position: absolute;
         transform: translateY(6px);
         animation: 20s linear rotate infinite;
@@ -222,7 +274,7 @@
 
       &:nth-child(1){
         svg{
-          top:140px;
+          top: 140px;
         }
       }
     }
@@ -258,10 +310,16 @@
     max-width: 385px;
     width: 100%;
     color:#99999D;
-    font-size: 16px;
+    font-size: 1vw;
     font-weight: 500;
     line-height: 1.36;
     letter-spacing: -0.16px;
+
+    @media (max-width: 920px) {
+      text-align: center;
+      font-size: 17px;
+      width: 380px;
+    }
   }
 }
 
@@ -531,39 +589,33 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  // padding: 360px 0 0;
   margin-bottom: 154px;
   position: relative;
-
+  gap: 32px;
   @media (max-width: 520px) {
     flex-direction: column;
   }
-  &:after {
-    content: '';
-    background: linear-gradient(181deg, rgba(1, 1, 1, 0.00) 12.83%, #020202 91.16%);
-    width: 100%;
-    height: 371px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-  }
+
 
   &__img {
-    // position: absolute;
     top: 0;
     z-index: 1;
 
     &> img{
       object-fit: contain;
-      height: 638px;
-      width: 638px;
-      max-width: none;
+      max-height: 638px;
+      max-width: 638px;
+
+      @media (max-width: 920px) {
+        // height: 358px;
+        // width: 358px;
+        // object-fit: cover;
+      }
     }
   }
 
   &__text {
-    max-width: 851px;
+    max-width: 650px;
     color: #F1F1F1;
     text-align: center;
     font-size: 32px;
@@ -582,9 +634,12 @@
   }
 
   &__author {
-    z-index: 3;
-    margin-right: auto;
-    padding-left: 16px;
+    opacity: 0.6;
+    justify-self: flex-end;
+
+    @media (max-width: 920px) {
+      padding-left: 16px;
+    }
   }
 }
 
@@ -592,12 +647,40 @@
 .academy-quote-container{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 65vh;
+  // width: 358px;
+  padding-left: 32px;
+
+  @media (max-width: 920px) {
+    padding-left: 0;
+    height: fit-content;
+  }
+}
+
+.academy-quote-text-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  @media (max-width: 920px) {
+    flex-direction: row;
+    justify-content: space-around;
+    height: fit-content;
+
+    .academy-prefix{ 
+      font-size: 48px;
+    }
+  }
 }
 
 .academy-prefix {
   @extend .academy-quote__text;
   width: fit-content;
-  font-size: 48px;
+  font-size: 81px;
+  margin: 0;
+  height: 60px;
 }
 
 .academy-footer {

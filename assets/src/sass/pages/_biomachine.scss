@@ -694,7 +694,7 @@
   }
 
   &__dsc {
-    max-width: 388px;
+    max-width: fit-content;
     text-align: center;
     @include adaptive-font(16, 20);
     font-weight: 500;
@@ -1023,6 +1023,11 @@
     text-transform: uppercase;
     @include media('<tablet') {
       letter-spacing: -0.72px;
+    }
+
+    @media (max-width: 920px) {
+      text-align: left !important;
+      padding-left: 16px;
     }
   }
 

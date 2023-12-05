@@ -76,50 +76,50 @@ jQuery(function($) {
     });
 });
 
-const sliderImages = new Swiper('.slider__images .swiper-container', { // ищем слайдер превью по селектору
-    // задаем параметры
-    direction: 'vertical', // вертикальная прокрутка
-    slidesPerView: 1, // показывать по 1 изображению
-    spaceBetween: 0, // расстояние между слайдами
-    grabCursor: true, // менять иконку курсора
-    breakpoints: { // условия для разных размеров окна браузера
-        0: { // при 0px и выше
-            direction: 'horizontal', // горизонтальная прокрутка
-        },
-        768: { // при 768px и выше
-            direction: 'vertical', // вертикальная прокрутка
-        }
-    },
-    mousewheel: {
-        releaseOnEdges: true // change this to 'true' to enable default scrolling when edge is reached
-    },
-    on: {
-        reachEnd: function() {
-            document.body.style.overflowY = 'auto'; 
-            document.body.style.overflowX = 'hidden';
-        },
-        reachBeginning: function() {
-            document.body.style.overflowY = 'auto'; 
-            document.body.style.overflowX = 'hidden';
-        },
-    }
-});
+// const sliderImages = new Swiper('.slider__images .swiper-container', { // ищем слайдер превью по селектору
+//     // задаем параметры
+//     direction: 'vertical', // вертикальная прокрутка
+//     slidesPerView: 1, // показывать по 1 изображению
+//     spaceBetween: 0, // расстояние между слайдами
+//     grabCursor: true, // менять иконку курсора
+//     breakpoints: { // условия для разных размеров окна браузера
+//         0: { // при 0px и выше
+//             direction: 'horizontal', // горизонтальная прокрутка
+//         },
+//         768: { // при 768px и выше
+//             direction: 'vertical', // вертикальная прокрутка
+//         }
+//     },
+//     mousewheel: {
+//         releaseOnEdges: true // change this to 'true' to enable default scrolling when edge is reached
+//     },
+//     on: {
+//         reachEnd: function() {
+//             document.body.style.overflowY = 'auto'; 
+//             document.body.style.overflowX = 'hidden';
+//         },
+//         reachBeginning: function() {
+//             document.body.style.overflowY = 'auto'; 
+//             document.body.style.overflowX = 'hidden';
+//         },
+//     }
+// });
 
-// Function to handle mouse wheel event
-function handleMouseWheel(e) {
-    const swiper = sliderImages;
+// // Function to handle mouse wheel event
+// function handleMouseWheel(e) {
+//     const swiper = sliderImages;
 
-    // Determine the direction of the scroll
-    const isScrollingUp = e.originalEvent.deltaY < 0;
-    console.log(isScrollingUp)
-    // Prevent window scroll if Swiper can still scroll
-    if ((isScrollingUp && !swiper.isBeginning) || (!isScrollingUp && !swiper.isEnd)) {
-        e.preventDefault();
-    }
-}
+//     // Determine the direction of the scroll
+//     const isScrollingUp = e.originalEvent.deltaY < 0;
+//     console.log(isScrollingUp)
+//     // Prevent window scroll if Swiper can still scroll
+//     if ((isScrollingUp && !swiper.isBeginning) || (!isScrollingUp && !swiper.isEnd)) {
+//         e.preventDefault();
+//     }
+// }
 
-// Attach the mouse wheel event listener to the Swiper container
-$(document).on('wheel', '.slider__images .swiper-container', handleMouseWheel);
+// // Attach the mouse wheel event listener to the Swiper container
+// $(document).on('wheel', '.slider__images .swiper-container', handleMouseWheel);
 
 
 const subtitlesElement = document.getElementById("subtitles");

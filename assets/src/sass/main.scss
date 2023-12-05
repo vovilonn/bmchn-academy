@@ -88,14 +88,57 @@
 
 .slider {
   padding: 32px;
+  margin-bottom: 64px;
+  margin-top: 64px;
   color: #fff;
-  overflow: hidden;
-  background: radial-gradient(circle at center, rgba(0, 0, 255, 0.05),#000)
+
+  overflow-x: auto;
+  background: radial-gradient(circle at center,#061322 10%,#000 50%);
+
+  --mask: linear-gradient(to top, 
+  rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 40%, 
+  rgba(0,0,0, 0) 110%, rgba(0,0,0, 0) 10%
+  ) 100% 50% / 100% 100% repeat-x;
+
+    font: 2em/1.6em Arial;
+    -webkit-mask: var(--mask); 
+    mask: var(--mask);
+    
+  h3 {
+    font-size: 2vw;
+  }
+
+  p {
+    font-size: 1vw;
+  }
+
+  @media (max-width: 920px) {
+    --mask: none;
+
+    h3 {
+      font-size: 22px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  
+  }
+
 
 }
 .slider .swiper-container {
   width: 100%;
   height: 100%;
+  overflow: auto;
+  scroll-snap-type: y mandatory; 
+
+  @media (max-width: 920px) {
+    display: flex;
+    flex-direction: row;
+    scroll-snap-type: x mandatory; 
+
+  }
 }
 .slider__flex {
   display: flex;
@@ -107,44 +150,32 @@
   width: 150px;
   margin-right: 32px;
 }
-.slider__prev,
-.slider__next {
-  cursor: pointer;
-  text-align: center;
-  font-size: 14px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.slider__prev:focus,
-.slider__next:focus {
-  outline: none;
-}
+
 .slider__images {
-  height: 600px;
+  height: 30vw;
+  overflow: auto;
 
   --mask: linear-gradient(to bottom, 
   rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 40%, 
-  rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
+  rgba(0,0,0, 0) 105%, rgba(0,0,0, 0) 0
   ) 100% 50% / 100% 100% repeat-x;
 
     font: 2em/1.6em Arial;
     -webkit-mask: var(--mask); 
     mask: var(--mask);
+
 }
 .slider__image {
   width: 90%;
   height: 90%;
   border-radius: 30px;
-  overflow: hidden;
   display: flex;
   align-items: center;
+
   justify-content: space-around;
+
+  scroll-snap-align: start; /* Элементы будут выравниваться по верхней части контейнера */
+  scroll-snap-stop: always; /* Заставляем прокрутку останавливаться на этом элементе */
 
 }
 .slider__image img {
@@ -170,23 +201,27 @@
 .v-stepper {
   display: flex;
   position: relative;
-  width: 50px; // Diameter of the circle
-  height: 50px; // Diameter of the circle
+  width: 5vw; // Diameter of the circle
+  height: 5vw; // Diameter of the circle
+  font-size: 2vw;
   background-color: #081A2F;
   border-radius: 50%;
   color: white;/*   visibility: visible; */
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 0px 21px 24px #081A2F;
+  box-shadow: 0px 0px 6px 2vw #061322;
+  
 }
-
 
 .line {
     z-index:-100;
-    height: 1100%;
+    height: 55vh;
     position: absolute;
     border-left: 1px dashed #99999D;
+    overflow: hidden; /* Добавляем, чтобы скрыть излишек псевдоэлемента */
+
 }
+
 
 .step:last-child .line {
   border-left: 3px solid white;
@@ -261,5 +296,6 @@
 
   .slider__image-text{
     padding-top: 32px;
+    
   }
 }

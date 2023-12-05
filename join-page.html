@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="assets/dist/css/main.css">
   <link rel="stylesheet" href="assets/dist/css/update.css">
   <link rel="stylesheet" href="assets/dist/css/academy-mobile-version.css">
-  <title>Academy</title>
+  <title>Сотрудничать</title>
   <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -17,6 +17,87 @@
 </head>
 <body>
   
+
+<header class="header">
+  <a href="index.html" class="header__logo">
+      <img src="assets/img/header-logo.svg" alt="">
+  </a>
+
+  <button class="header-nav__open js-nav-open"></button>
+</header>
+<div class="header-nav js-header-nav">
+  <div class="header-nav__inner">
+      <div class="header-nav__block">
+          <ul class="header-nav__list">
+              <li>
+                  <a href="https://bmchn.com/">
+                      <span>О НАС</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="https://bmchn.com/">
+                      <span>MEDIA</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="https://academy.bmchn.com/">
+                      <span>ACADEMY</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="https://store.bmchn.com/">
+                      <span>STORE</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="./join-page.html">
+                      <span>СОТРУДНИЧАТЬ</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="https://bmchn.com/vacancies.html">
+                      <span>ВАКАНСИИ</span>
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div class="header-nav__countainer">
+          <div class="header-nav__block">
+              <h4 class="header-nav__title">Проекты</h4>
+              <ul class="header-nav__links">
+                  <li>
+                      <a href="https://academy.bmchn.com/">ACADEMY</a>
+                  </li>
+                  <li>
+                      <a href="https://store.bmchn.com/">STORE</a>
+                  </li>
+                  <li>
+                      <a href="https://bmchn.com/biomachine.html">BIOMACHINE</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="header-nav__block">
+              <h4 class="header-nav__title">Соцсети</h4>
+              <ul class="header-nav__links">
+                  <li>
+                      <a href="https://t.me/bmchn">Telegram</a>
+                  </li>
+                  <li>
+                      <a href="https://www.youtube.com/@bmchn">YouTube</a>
+                  </li>
+                  <li>
+                      <a href="https://instagram.com/bmchn">Instagram</a>
+                  </li>
+                  <li>
+                      <a href="https://vk.com/bmchn">VK</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+
+
 <div class="academy-join">
   <div class="academy-join-title">
       <p>СОТРУДНИЧЕСТВО И КОММЕРЧЕСКИЕ ЗАПРОСЫ</p>
@@ -25,12 +106,53 @@
   </div>
 </div>
 
+<nav class="page-nav js-page-nav nav-join">
+  <ul>
+      <li><a data-page-nav-index="1" href="https://academy.bmchn.com">ACADEMY</a></li>
+      <li><a data-page-nav-index="2" href="https://store.bmchn.com">STORE</a></li>
+      <li><a data-page-nav-index="3" href="#">BIOMACHINE</a></li>
+  </ul>
+</nav>
+<div class="page-nav-popup js-page-nav-popup">
+  <div class="page-nav-popup__inner js-page-nav-inner" data-page-nav-index="1">
+      <h3>Перейти в Biomachine Academy?</h3>
+      <p>Обучающая платформа, на которой ты сможешь быстро и эффективно усовершенствовать свою Биомашину.</p>
+      <a href="https://academy.bmchn.com/" class="btn">
+          <span>Перейти</span>
+      </a>
+      <button class="js-close"></button>
+
+      <button class="js-close-hard">Больше не показывать</button>
+  </div>
+  <div class="page-nav-popup__inner js-page-nav-inner" data-page-nav-index="2">
+      <h3>Перейти в Biomachine STORE?</h3>
+      <p>Интернет-магазин одежды, аксессуаров и прочих физических товаров.</p>
+      <a href="https://store.bmchn.com/" class="btn">
+          <span>Перейти</span>
+      </a>
+
+      <button class="js-close"></button>
+
+      <button class="js-close-hard">Больше не показывать</button>
+  </div>
+  <div class="page-nav-popup__inner js-page-nav-inner" data-page-nav-index="3">
+      <h3>Перейти на страницу о бренде?</h3>
+      <p>На этом сайте мы развёрнуто рассказываем о нашем бренде, философии и ценностях.</p>
+      <a href="https://bmchn.com/" class="btn">
+          <span>Перейти</span>
+      </a>
+
+      <button class="js-close"></button>
+
+      <button class="js-close-hard">Больше не показывать</button>
+  </div>
+</div>
 <div class="based">
   <img src="assets/img/map-point.svg">
   <p>BASED IN MOSCOW</p>
 </div>
   <div class="footer__bottom academy-footer  academy-footer-join">
-      <span>©BIOMACHINE. 2023</span>
+      <span class="academy-footer-name">©BIOMACHINE. 2023</span>
 
       <ul>
           <li><a href="https://t.me/bmchn">Telegram</a></li>
@@ -39,7 +161,14 @@
           <li><a href="https://vk.com/bmchn">VK</a></li>
       </ul>
 
-      <a href="mailto:bmchncorp@yandex.ru">bmchncorp@yandex.ru</a>
+      <a class="academy-footer-email" href="mailto:bmchncorp@yandex.ru">bmchncorp@yandex.ru</a>
   </div>
+
+
+  <script src="assets/src/js/vendor/jquery.min.js"></script>
+<script src="assets/src/js/vendor/swiper-bundle.js"></script>
+<script src="assets/dist/js/build.min.js"></script>
+
+
 </body>
 </html>

@@ -29,7 +29,9 @@ button {
     margin-left: 8px;
   }
 }
-
+.blue {
+  background-color: #00529E;
+}
 .btn-arrow {
   color: $c-text-primary;
   @include adaptive-font(16);

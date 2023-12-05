@@ -21,7 +21,7 @@
     align-items: center;
     height: 100%;
     padding: 32px;
-
+    
     @include media('<tablet') {
       height: 33.3vh;
       padding: 16px;
